@@ -61,7 +61,7 @@ class RetrofitClient(context: Context) {
 
     fun apiService(isWorkNote: Boolean): ApiService {
         // переключатель для разных API
-        when (APIENUM.PRODUCTION) {
+        when (APIENUM.TEST) {
             APIENUM.TEST -> {
                 return if (isWorkNote)
                     retrofit("https://worknote-back.stage.smartro.ru/api/fact/").create(ApiService::class.java)
